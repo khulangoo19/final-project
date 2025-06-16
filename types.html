@@ -26,6 +26,45 @@
     <div>
       <h1 class = "types-title"> BATTERY TYPES</h1>
     </div>
+    <button class="mobile-filter-toggle" onclick="toggleMobileFilters()">🔍 Filter</button>
+        <div class="mobile-filters" id="mobileFilters">
+            <button onclick="toggleMobileFilters()" style="margin-bottom:10px;">✖ Close</button>
+            <input type="text" id="mobileSearchInput" placeholder="Search...">
+                <div class="filter-group">
+                    <div class="filter-group">
+                    <h4>Life-Span</h4>
+                        <label><input type="radio" name="life" value="" checked> All</label>
+                        <label><input type="radio" name="life" value="short"> Short</label>
+                        <label><input type="radio" name="life" value="medium"> Medium</label>
+                        <label><input type="radio" name="life" value="long"> Long</label>
+                        <label><input type="radio" name="life" value="very_long"> Very Long</label>
+                    </div>
+
+                    <div class="filter-group">
+                    <h4>Price: <span id="priceLabel">$0 - $1500</span></h4>
+                    <input type="range" id="priceRange" min="0" max="1500" value="1500" step="10" />
+                    </div>
+
+                    <div class="filter-group">
+                    <h4>Energy Density</h4>
+                        <label><input type="radio" name="energy" value="" checked> All</label>
+                        <label><input type="radio" name="energy" value="0-100"> 0-100 Wh/kg</label>
+                        <label><input type="radio" name="energy" value="100-200"> 100-200 Wh/kg</label>
+                        <label><input type="radio" name="energy" value="200-300"> 200-300 Wh/kg</label>
+                        <label><input type="radio" name="energy" value="300-400"> 300-400 Wh/kg</label>
+                    </div>  
+
+                    <div class="filter-group">
+                    <h4>Power Density</h4>
+                        <label><input type="radio" name="power" value="" checked> All</label>
+                        <label><input type="radio" name="power" value="0-300"> 0-300 W/kg</label>
+                        <label><input type="radio" name="power" value="300-500"> 300-500 W/kg</label>
+                        <label><input type="radio" name="power" value="500-1000"> 500-1000 W/kg</label>
+                        <label><input type="radio" name="power" value="1000-10000"> 1000-10000 W/kg</label>
+                        <label><input type="radio" name="power" value="10000-"> 10000+ W/kg</label>
+                    </div>  
+                    </div> 
+            </div> 
     <div class = "whole">
         <div class ="left">
             <div class="sidebar-filters">
@@ -141,45 +180,6 @@
                     </div>   
             </div>                   
         </div>
-        <button class="mobile-filter-toggle" onclick="toggleMobileFilters()">🔍 Filter</button>
-        <div class="mobile-filters" id="mobileFilters">
-            <button onclick="toggleMobileFilters()" style="margin-bottom:10px;">✖ Close</button>
-            <input type="text" id="mobileSearchInput" placeholder="Search...">
-                <div class="filter-group">
-                    <div class="filter-group">
-                    <h4>Life-Span</h4>
-                        <label><input type="radio" name="life" value="" checked> All</label>
-                        <label><input type="radio" name="life" value="short"> Short</label>
-                        <label><input type="radio" name="life" value="medium"> Medium</label>
-                        <label><input type="radio" name="life" value="long"> Long</label>
-                        <label><input type="radio" name="life" value="very_long"> Very Long</label>
-                    </div>
-
-                    <div class="filter-group">
-                    <h4>Price: <span id="priceLabel">$0 - $1500</span></h4>
-                    <input type="range" id="priceRange" min="0" max="1500" value="1500" step="10" />
-                    </div>
-
-                    <div class="filter-group">
-                    <h4>Energy Density</h4>
-                        <label><input type="radio" name="energy" value="" checked> All</label>
-                        <label><input type="radio" name="energy" value="0-100"> 0-100 Wh/kg</label>
-                        <label><input type="radio" name="energy" value="100-200"> 100-200 Wh/kg</label>
-                        <label><input type="radio" name="energy" value="200-300"> 200-300 Wh/kg</label>
-                        <label><input type="radio" name="energy" value="300-400"> 300-400 Wh/kg</label>
-                    </div>  
-
-                    <div class="filter-group">
-                    <h4>Power Density</h4>
-                        <label><input type="radio" name="power" value="" checked> All</label>
-                        <label><input type="radio" name="power" value="0-300"> 0-300 W/kg</label>
-                        <label><input type="radio" name="power" value="300-500"> 300-500 W/kg</label>
-                        <label><input type="radio" name="power" value="500-1000"> 500-1000 W/kg</label>
-                        <label><input type="radio" name="power" value="1000-10000"> 1000-10000 W/kg</label>
-                        <label><input type="radio" name="power" value="10000-"> 10000+ W/kg</label>
-                    </div>  
-                    </div> 
-            </div>        
     </div>
     <div class="nav-footer">
         <p> @EV Battery Explorer 2025. Khulangoo</p>
